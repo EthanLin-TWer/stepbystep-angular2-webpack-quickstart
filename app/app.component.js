@@ -9,16 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('angular2/core');
+var todo_input_1 = require('./todo-input');
 var AppComponent = (function () {
     function AppComponent() {
     }
-    AppComponent.prototype.onClick = function (value) {
-        console.log(value + 'clicked');
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>Welcome to Angular 2 World</h1>\n        <div>\n            <input type=\"text\" #angularInput>\n            <button (click)=\"onClick(angularInput.value)\">Click Me</button>\n        </div>\n    "
+            directives: [todo_input_1.TodoInput],
+            template: '<div><todo-input></todo-input></div>'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
