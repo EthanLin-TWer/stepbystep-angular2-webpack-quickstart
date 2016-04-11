@@ -1,5 +1,6 @@
 import {Component, Inject} from 'angular2/core';
 import {TodoService} from "./todo-service";
+import {TodoList} from './todo-list';
 
 @Component({
     selector: 'todo-input',
@@ -15,14 +16,13 @@ export class TodoInput {
     constructor (@Inject(TodoService) public todoService) {}
 
     onClick(event, value) {
-        this.todoService.todos = '';
+        this.todoService.todos.push(value);
+        value = '';
 
         console.log(event, value);
     }
 
     onLog(value) {
-        this.todoService.todos = value;
-
-        console.log(this.todoService.todos + ' length: ' + this.todoService.todos.length);
+        console.log(this.todoService.todos + length);
     }
 }

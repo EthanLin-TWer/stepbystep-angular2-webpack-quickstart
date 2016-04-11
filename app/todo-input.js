@@ -18,12 +18,12 @@ var TodoInput = (function () {
         this.todoService = todoService;
     }
     TodoInput.prototype.onClick = function (event, value) {
-        this.todoService.todos = '';
+        this.todoService.todos.push(value);
+        value = '';
         console.log(event, value);
     };
     TodoInput.prototype.onLog = function (value) {
-        this.todoService.todos = value;
-        console.log(this.todoService.todos + ' length: ' + this.todoService.todos.length);
+        console.log(this.todoService.todos + length);
     };
     TodoInput = __decorate([
         core_1.Component({

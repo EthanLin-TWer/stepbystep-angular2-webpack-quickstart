@@ -10,14 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('angular2/core');
 var todo_input_1 = require('./todo-input');
+var todo_list_1 = require('./todo-list');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            directives: [todo_input_1.TodoInput],
-            template: '<div><todo-input></todo-input></div>'
+            directives: [todo_input_1.TodoInput, todo_list_1.TodoList],
+            template: "<div>\n    <todo-input></todo-input>\n    <todo-list></todo-list>\n    </div>"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
