@@ -20,5 +20,6 @@ export class TodoInput {
 
     onSubmit() {
         this.todoService.todos.push(this.todoModel);
+        this.todoModel = '';
     }
 }

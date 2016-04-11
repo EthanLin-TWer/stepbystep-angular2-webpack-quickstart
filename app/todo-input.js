@@ -19,6 +19,7 @@ var TodoInput = (function () {
     }
     TodoInput.prototype.onSubmit = function () {
         this.todoService.todos.push(this.todoModel);
+        this.todoModel = '';
     };
     TodoInput = __decorate([
         core_1.Component({
