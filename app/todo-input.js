@@ -17,12 +17,8 @@ var TodoInput = (function () {
     function TodoInput(todoService) {
         this.todoService = todoService;
     }
-    TodoInput.prototype.onSubmit = function (event) {
+    TodoInput.prototype.onSubmit = function () {
         this.todoService.todos.push(this.todoModel);
-        console.log(event, this.todoModel);
-    };
-    TodoInput.prototype.onLog = function (value) {
-        console.log(this.todoService.todos + length);
     };
     TodoInput = __decorate([
         core_1.Component({

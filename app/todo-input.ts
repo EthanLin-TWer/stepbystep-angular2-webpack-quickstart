@@ -18,13 +18,7 @@ export class TodoInput {
 
     todoModel;
 
-    onSubmit(event) {
+    onSubmit() {
         this.todoService.todos.push(this.todoModel);
-
-        console.log(event, this.todoModel);
-    }
-
-    onLog(value) {
-        console.log(this.todoService.todos + length);
     }
 }
