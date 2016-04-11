@@ -6,8 +6,9 @@ import {TodoList} from './todo-list';
     selector: 'todo-input',
     template: `<h1>Welcome to Angular 2 World</h1>
         <div>
-            <input type="text" #angularInput (keydown)="onLog(angularInput.value)">
-            <button (click)="onClick($event, angularInput.value)">Save And Clear</button>
+            <form (submit)="onSubmit()">
+                <input type="text" [(ngModel)]="todoModel">
+            </form>
         </div>
     `
 })
@@ -15,11 +16,12 @@ import {TodoList} from './todo-list';
 export class TodoInput {
     constructor (@Inject(TodoService) public todoService) {}
 
-    onClick(event, value) {
-        this.todoService.todos.push(value);
-        value = '';
+    todoModel;
 
-        console.log(event, value);
+    onSubmit(event) {
+        this.todoService.todos.push(this.todoModel);
+
+        console.log(event, this.todoModel);
     }
 
     onLog(value) {

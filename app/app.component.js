@@ -18,7 +18,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             directives: [todo_input_1.TodoInput, todo_list_1.TodoList],
-            template: "<div>\n    <todo-input></todo-input>\n    <todo-list></todo-list>\n    </div>"
+            template: "<div>\n        <todo-input></todo-input>\n        <todo-list></todo-list>\n    </div>"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

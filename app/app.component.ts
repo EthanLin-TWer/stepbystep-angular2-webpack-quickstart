@@ -6,8 +6,8 @@ import {TodoList} from './todo-list';
     selector: 'my-app',
     directives: [TodoInput, TodoList],
     template: `<div>
-    <todo-input></todo-input>
-    <todo-list></todo-list>
+        <todo-input></todo-input>
+        <todo-list></todo-list>
     </div>`
 
 })

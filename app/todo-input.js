@@ -17,10 +17,9 @@ var TodoInput = (function () {
     function TodoInput(todoService) {
         this.todoService = todoService;
     }
-    TodoInput.prototype.onClick = function (event, value) {
-        this.todoService.todos.push(value);
-        value = '';
-        console.log(event, value);
+    TodoInput.prototype.onSubmit = function (event) {
+        this.todoService.todos.push(this.todoModel);
+        console.log(event, this.todoModel);
     };
     TodoInput.prototype.onLog = function (value) {
         console.log(this.todoService.todos + length);
@@ -28,7 +27,7 @@ var TodoInput = (function () {
     TodoInput = __decorate([
         core_1.Component({
             selector: 'todo-input',
-            template: "<h1>Welcome to Angular 2 World</h1>\n        <div>\n            <input type=\"text\" #angularInput (keydown)=\"onLog(angularInput.value)\">\n            <button (click)=\"onClick($event, angularInput.value)\">Save And Clear</button>\n        </div>\n    "
+            template: "<h1>Welcome to Angular 2 World</h1>\n        <div>\n            <form (submit)=\"onSubmit()\">\n                <input type=\"text\" [(ngModel)]=\"todoModel\">\n            </form>\n        </div>\n    "
         }),
         __param(0, core_1.Inject(todo_service_1.TodoService)), 
         __metadata('design:paramtypes', [Object])
