@@ -8,6 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 var core_1 = require('angular2/core');
 var todo_service_1 = require("./todo-service");
 var TodoInput = (function () {
@@ -26,8 +29,9 @@ var TodoInput = (function () {
         core_1.Component({
             selector: 'todo-input',
             template: "<h1>Welcome to Angular 2 World</h1>\n        <div>\n            <input type=\"text\" #angularInput (keydown)=\"onLog(angularInput.value)\">\n            <button (click)=\"onClick($event, angularInput.value)\">Save And Clear</button>\n        </div>\n    "
-        }), 
-        __metadata('design:paramtypes', [todo_service_1.TodoService])
+        }),
+        __param(0, core_1.Inject(todo_service_1.TodoService)), 
+        __metadata('design:paramtypes', [Object])
     ], TodoInput);
     return TodoInput;
 }());

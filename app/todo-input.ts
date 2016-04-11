@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, Inject} from 'angular2/core';
 import {TodoService} from "./todo-service";
 
 @Component({
@@ -12,7 +12,7 @@ import {TodoService} from "./todo-service";
 })
 
 export class TodoInput {
-    constructor (public todoService: TodoService) {}
+    constructor (@Inject(TodoService) public todoService) {}
 
     onClick(event, value) {
         this.todoService.todos = '';
