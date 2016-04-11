@@ -24,7 +24,7 @@ var TodoInput = (function () {
     TodoInput = __decorate([
         core_1.Component({
             selector: 'todo-input',
-            template: "<h1>Welcome to Angular 2 World</h1>\n        <div>\n            <form (submit)=\"onSubmit()\">\n                <input type=\"text\" [(ngModel)]=\"todoModel\">\n            </form>\n        </div>\n    "
+            template: "<h1>Welcome to Angular 2 World</h1>\n        <div>\n            <form (submit)=\"onSubmit()\">\n                <input type=\"text\" [(ngModel)]=\"todoModel\" autofocus>\n            </form>\n        </div>\n    "
         }),
         __param(0, core_1.Inject(todo_service_1.TodoService)), 
         __metadata('design:paramtypes', [Object])
